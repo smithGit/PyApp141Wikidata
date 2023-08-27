@@ -2,12 +2,19 @@
 
 ![Project Logo or Screenshot](link-to-image.png) <!-- Optional: If you have a logo or screenshot, add it here -->
 
-Welcome to the "Python Access to Wikidata" project! This repository provides Python code and examples for accessing data from Wikidata, a collaborative database of structured data. Use this project to explore, retrieve, and utilize information from Wikidata using Python.
+Welcome to the "Python Access to Wikidata" project! This repository provides Python code and
+examples for accessing data from Wikidata and creating a multi-sheet Excel Workbook with the results. 
+
+The specific query of this example is to query Wikidata for all causes of death that are COVID-19, retrieve the Occupation(s) of each individual as well as date of birth and date of death, and analyze the results. 
+
+
 
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+- [App Features](#app-features)
 - [Usage](#usage)
+- [Collaborators](#collaborators)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -19,6 +26,20 @@ To get started with the "Python Access to Wikidata" project, follow these steps:
 2. Install the required Python packages by running: `pip install -r requirements.txt`.
 3. Explore the provided code examples and documentation to understand how to access Wikidata using Python.
 
+## App Features
+
+The features of this app are: 
+
+1. Use of WikidataIntegrator, developed by SuLab at Scripps Institute,
+2. Access query.wikidata.org with a SPARQL query
+3. Decode the JSON results to create both a list containing all rows returned and a dictionary with each person as key, data fields returned from WD, and a dictionary of occupations held by each person,
+4. use of xlswriter to create the Excel workbook with  multiple sheets:  
+  1. sht_wd_covid - List of Rows returned (excluding any with no English label)
+  2. Notes - notes about the workbook as well as statistics
+  3. distinctPeople - row for each individual person returned
+  4. distinctOccup - row for each occupation, showing total count and breakdown by age 
+  5. personOccupations - for each person, a column for each occupation held showin occupation id and label.
+
 ## Usage
 
 Here's a brief overview of how you can use this project to access Wikidata using Python:
@@ -29,7 +50,19 @@ Here's a brief overview of how you can use this project to access Wikidata using
 
 For detailed usage instructions and examples, refer to the [documentation](documentation.md).
 
+## Collaborators
+
+This application was developed in connection with the Occupation Ontology (OccO) informal workgroup consistint of:
+
+1. Dr. Yongqun (Oliver) He, University of Michigan Medical Center
+2. Dr. Jie Zheng, University of Michigan Medical Center
+3. Dr. John Beverley, The New York State University at Buffalo
+4. Dr. Bill Duncan, The University of Florida
+5. PhD Candidate Matthew Diller, The University of Florida
+6. Sam Smith, retired volunteer in Dr. He's HeLab and programmer (SmithGit)
+
 ## Contributing
+
 
 Contributions are welcome! If you'd like to contribute to the project, follow these steps:
 
@@ -37,8 +70,8 @@ Contributions are welcome! If you'd like to contribute to the project, follow th
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and commit them.
 4. Push the changes to your fork and create a pull request.
-
-For more information, see [CONTRIBUTING.md](CONTRIBUTING.md).
+<!--
+For more information, see [CONTRIBUTING.md](CONTRIBUTING.md).  -->
 
 ## License
 
@@ -46,4 +79,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 
 ---
 
-For questions, issues, or more information about this project, contact [your-name](mailto:your-email@example.com).
+For questions, issues, or more information about this project, contact [Sam Smith](mailto:samsmith1963bc@gmail.com).
