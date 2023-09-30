@@ -14,6 +14,7 @@ The specific query of this example is to query Wikidata for all causes of death 
 - [Getting Started](#getting-started)
 - [App Features](#app-features)
 - [Usage](#usage)
+- [Interpreting Results](#interpreting-results)
 - [Collaborators](#collaborators)
 - [Contributing](#contributing)
 - [License](#license)
@@ -49,6 +50,17 @@ Here's a brief overview of how you can use this project to access Wikidata using
 3. Process the retrieved data for your specific use case.
 
 For detailed usage instructions and examples, refer to the [documentation](documentation.md).
+
+## Interpreting Results
+
+The age ranges and codes are as follows:
+
+- young - 21 or younger 
+- adult - 22 to 35 - adult, starting a career and family 
+- midlife - 36 to 50 - establshing career, supporting the family 
+- senior - 51 - 65 - career established, becoming empty nester 
+- socsec - 65 - 80 - Social Security age, many retire 
+- old - over 80 - Few remain working, health issues become common 
 
 ## Collaborators
 
